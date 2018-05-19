@@ -41,6 +41,7 @@ def main():
     try:
         call('{} start'.format(get_script('seafile.sh')))
         call('{} start'.format(get_script('seahub.sh')))
+        call('{} start'.format(get_script('seafile-background-tasks.sh')))
     finally:
         if exists(password_file):
             os.unlink(password_file)
